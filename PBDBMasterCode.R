@@ -14,12 +14,11 @@ dat <- dat[dat$genus!="", ]
 dat <- dat[dat$class!="", ]
 dat <- dat[dat$order!="", ]
 dat <- dat[dat$family!="", ]
-dat <- dat[dat$Group!="", ]
 need<-c("collection_no","accepted_name","accepted_rank", 
         "identified_name","identified_rank","early_interval", 
         "late_interval", "max_ma","min_ma","reference_no", 
         "phylum", "class", "order", "family",
-        "genus", "Group")
+        "genus")
 dat <- dat[,need]
 save(dat, file="base_data.RData")
 data(stages)
@@ -48,7 +47,6 @@ title(main="Ranges of taxon")
 #Occurrence plot
 samp <-binstat(dat, tax="class", bin="stg",
                coll="collection_no", ref="reference_no", indices=TRUE, duplicates=TRUE)
-par(mar=c(4,4,2,4))
 tsplot(stages, shading="series", boxes="sys", xlim=4:93, boxes.col=c("systemCol"), ylab="number of occurrences", ylim=c(0,3000))
 lines(stages$mid[4:93], samp$occs[4:93])
 title(main="Occurrences of taxon")
