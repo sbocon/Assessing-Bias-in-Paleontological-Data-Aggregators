@@ -1,15 +1,5 @@
 #Thank you for downloading my code!
 library(divDyn)
-library(velociraptr)
-library(paleobioDB)
-library(paleoTS)
-library(geoscale)
-library(paleotree)
-library(phytools)
-library(dplyr)
-library(ggplot2)
-library(ggpubr)
-library(scales)
 library(tidyverse)
 #iDigBio automatically downloads files as "occurrence.csv"
 dat <- read.csv("occurrence.csv", header=TRUE, stringsAsFactors=FALSE)
