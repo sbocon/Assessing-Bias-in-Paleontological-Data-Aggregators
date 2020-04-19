@@ -1,6 +1,6 @@
 #Thank you for downloading my code!
 library(divDyn)
-#I recommend downloading your data as a .csv from whichever repository you choose to use
+#I recommend downloading your data as a .csv from the PBDB
 #To work with my code, name this file "base_data.csv"
 dat <- read.csv("base_data.csv", header=TRUE, stringsAsFactors=FALSE)
 dat <- dat[dat$genus!="", ]
